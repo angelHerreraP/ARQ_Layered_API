@@ -29,12 +29,17 @@ usualmente lo encuantras como
 <'/dependencies>
 
 
-2. applicacion.properties / application.yml:  
+2. applicacion.properties / application.yml:    
 Sirve para configurar el comportamiento de la aplicación: conexión a BD, puertos, logs, etc.  
 
 -- ==========================================  
  
-__CARPETAS__
+__CARPETAS__  
 1. __Model/:__  
    A palabras simples, me gusta ver el model como un objeto de "la DB" en tu programa; por eso, si empatan la tabla DB con el modelo Usuario, se darán cuenta de que es lo mismo. Sin embargo, el modelo también puede incluir funciones simples relacionadas con ese objeto, como métodos para calcular valores derivados o formatear información.2.
 2. 
+
+
+
+__ORDEN SEGUN YO::__  
+1. Model, asi sabemos QUE estamos construyendo

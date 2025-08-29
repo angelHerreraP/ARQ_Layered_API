@@ -10,10 +10,10 @@ import lombok.*;
 @Setter// ahorra escribir
 @NoArgsConstructor //genera un constructor vacio
 @AllArgsConstructor //genera un consturctor con tokio y kawazaki
-@Builder //a la hora de construir te ahorra lineas de ocidgo
+@Builder //a la hora de construir te ahorra lineas de codigo
 public class Usuario {
 
-    //UUID + ID
+
     @Id
     @GeneratedValue
     @Column(columnDefinition = "uuid", updatable = false, nullable = false)
@@ -35,6 +35,13 @@ public class Usuario {
     @Column(name="fecha_registro", nullable = false, updatable = false)
     private  LocalDateTime fechaRegistro = LocalDateTime.now();
 
+    @Column(nullable = false)
+    private boolean activo = true;
+
+
+
+
+
 ///modifica este enum para tener mas ROLE
 /// - ADMIN, generales
 /// - VENDEDOR, solo ventas y visualizacion de inventarios
@@ -43,7 +50,13 @@ public class Usuario {
         ADMIN, VENDEDOR, INGRESOS
     }
 
-
+// Metodo para cambiar de Rol
+    //este puede ir aqui, porque SOLO cambia el valor de la variable, la logica de los permisos y demas va en otro lado:
+    public void ChanceRole(Rol nuevoRol){
+        if(nuevoRol != null){
+            this.rol = nuevoRol;
+        }
+    }
 
 
 }
