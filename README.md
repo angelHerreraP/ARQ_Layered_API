@@ -37,9 +37,15 @@ Sirve para configurar el comportamiento de la aplicación: conexión a BD, puert
 __CARPETAS__  
 1. __Model/:__  
    A palabras simples, me gusta ver el model como un objeto de "la DB" en tu programa; por eso, si empatan la tabla DB con el modelo Usuario, se darán cuenta de que es lo mismo. Sin embargo, el modelo también puede incluir funciones simples relacionadas con ese objeto, como métodos para calcular valores derivados o formatear información.2.
-2. 
+2. _Repository/:
+    En mi caso en repository implemento el JPA que ya trae cosas basicas del model, si necesito algo solo genero el contrato
+3. _Service/:
+   Estelleva dos, Service y ServiceImpl, en Service vas a generar mas contratos mas especificos y en Impl ahora si, los vas a definir chidito
 
 
 
 __ORDEN SEGUN YO::__  
 1. Model, asi sabemos QUE estamos construyendo
+2. Repsoitory
+3. Service
+4. ServiceImpl

@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import jakarta.persistence.*;
 import lombok.*;
 
+
 @Table(name ="usuarios")//Define el nombre de tu tabla
 @Entity //lo considera una entidad (eso si es considerarlo una tabla)
 @Getter // ahorra escribir
